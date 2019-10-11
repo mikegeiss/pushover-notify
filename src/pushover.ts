@@ -9,6 +9,8 @@ export class PushOverConnector {
    * @param {string} token - PushOver token for specified user
   */
   constructor(private user: string, private token: string) {
+    assert.ok(this.user, 'please pass parameter user:string');
+    assert.ok(this.token, 'please pass parameter token:string');
   }
 
   async sendMessage(message: string) {
